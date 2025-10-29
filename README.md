@@ -18,6 +18,19 @@ npm install
 
 to install dependencies.
 
+## Deprecated modules
+
+- inflight@1.0.6 --> lru-cache
+- rimraf@2.6.3
+- glob@7.1.6
+- debug@4.2.0
+- eslint@7.11.0
+
+```bash
+npm audit
+npm audit fix
+```
+
 ### Instructor
 
 **Morten Rand-Hendriksen**
