@@ -7,6 +7,11 @@
 /* Multi-line comment
 See! this line is also commented out! */
 
+/**
+ * function updateBackpack
+ * Outputs HTML
+ * @param {string} update
+ */
 const updateBackpack = (update) => {
   let main = document.querySelector("main"); // main is an element
   main.innerHTML = markup(backpack);
@@ -37,16 +42,16 @@ const backpack = {
 const markup = (backpack) => {
   return `
   <div>
-	<h3>${backpack.name}</h3>
-	<ul>
-	  <li>Volume: ${backpack.volume}</li>
-	  <li>Color: ${backpack.color}</li>
-	  <li>Number of pockets: ${backpack.pocketNum}</li>
-	  <li>Strap lengths: L: ${backpack.strapLength.left}, R: ${
+  <h3>${backpack.name}</h3>
+  <ul>
+    <li>Volume: ${backpack.volume}</li>
+    <li>Color: ${backpack.color}</li>
+    <li>Number of pockets: ${backpack.pocketNum}</li>
+    <li>Strap lengths: L: ${backpack.strapLength.left}, R: ${
     backpack.strapLength.right
   } </li>
-	  <li>Top lid: ${backpack.lidOpen ? "Open" : "Closed"}</li>
-	</ul>
+    <li>Top lid: ${backpack.lidOpen ? "Open" : "Closed"}</li>
+  </ul>
   </div>
 `;
 };
