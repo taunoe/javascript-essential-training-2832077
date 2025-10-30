@@ -20,3 +20,14 @@ const backpack = {
     this.strapLength.right = lengthRight;
   },
 };
+
+console.log("The backpack object:", backpack);
+
+// Dot notation
+console.log("Color 1:", backpack.color);
+
+// Bracket notation
+console.log("Color 2:", backpack["color"]);
+
+var query = "color";
+console.log("Color 3:", backpack[query]);
