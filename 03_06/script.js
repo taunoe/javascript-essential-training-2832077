@@ -58,8 +58,10 @@ console.log(pliiats.lenght.toString());
 const joonlaud = {
   pikkus: 40,
   toString: function () {
-    return "Joonlaud on pikkusega ${this.pikkus}"; // ?????
+    //return "Joonlaud on pikkusega ${this.pikkus}"; // ?????
+    return `Joonlaud: ${this.pikkus} mm pikk`;
   },
 };
 
-console.log(joonlaud.toString);
+console.log(joonlaud.toString());
+console.log("viimane");
