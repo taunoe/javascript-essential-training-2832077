@@ -20,13 +20,16 @@ class Backpack {
     this.lidOpen = lidOpen;
     this.dateAcquired = dateAcquired;
   }
+  // Method
   toggleLid(lidStatus) {
     this.lidOpen = lidStatus;
   }
+  // Method
   newStrapLength(lengthLeft, lengthRight) {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   }
+  // Method
   backpackAge() {
     let now = new Date();
     let acquired = new Date(this.dateAcquired);

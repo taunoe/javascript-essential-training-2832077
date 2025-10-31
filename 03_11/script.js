@@ -21,9 +21,11 @@ function Backpack(
     right: strapLengthR,
   };
   this.lidOpen = lidOpen;
+  // Method
   this.toggleLid = function (lidStatus) {
     this.lidOpen = lidStatus;
   };
+  // Method
   this.newStrapLength = function (lengthLeft, lengthRight) {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
@@ -39,3 +41,5 @@ const everydayPack = new Backpack(
   26,
   false
 );
+
+console.log(everydayPack);
