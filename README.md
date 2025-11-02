@@ -31,6 +31,8 @@ npm audit
 npm audit fix
 ```
 
+QuerySelector [05_02](05_02/)
+
 ### Instructor
 
 **Morten Rand-Hendriksen**

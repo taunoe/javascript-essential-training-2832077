@@ -18,3 +18,10 @@ const everydayPack = new Backpack(
 
 console.log("The everydayPack object:", everydayPack);
 console.log("Date acquired:", everydayPack.dateAcquired);
+
+// Global objects
+const aeg = new Date();
+console.log(aeg);
+console.log(aeg.toDateString()); // Sat Nov 01 2025
+console.log(aeg.toTimeString()); // 09:38:52 GMT+0200 (Ida-Euroopa standardaeg) script.js:26:9
+

@@ -16,6 +16,10 @@ const everydayPack = new Backpack(
   "December 5, 2018 15:00:00 PST"
 );
 
+// Traditional string output:
+// const content = "<h1>" + everydayPack.name + "</h1>";
+
+// Template literals:
 const content = `
   <main>
     <article>

@@ -39,4 +39,30 @@ class Backpack {
   }
 }
 
+class seljakott extends Backpack{
+  constructor(
+    name,
+    volume,
+    color,
+    pocketNum,
+    strapLengthL,
+    strapLengthR,
+    lidOpen,
+    dateAcquired,
+    brand,
+    kaal
+  ) {
+    // Initialize the parent class properties
+    super(name, volume, color, pocketNum, strapLengthL, strapLengthR, lidOpen, dateAcquired);
+    // New property specific to seljakott
+    this.brand = brand;
+    this.kaal = kaal;
+  }
+  // new method
+  prindikaal() {
+    console.log(`Kaal on ${this.kaal}`);
+  }
+  // override methods from the parent class 
+}
+
 export default Backpack;
