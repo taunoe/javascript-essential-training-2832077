@@ -51,3 +51,10 @@ const content = `
 `;
 
 main.innerHTML = content;
+
+// Loe
+const color = document.querySelector(".site-title").style.color; // black
+console.log(color);
+// Muuda
+document.querySelector(".site-title").style.color = "red";
+

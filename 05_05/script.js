@@ -51,3 +51,16 @@ const content = `
 `;
 
 main.innerHTML = content;
+
+const atr = document.querySelector("img").attributes;
+console.log(atr);
+
+// Kas on attripuut
+//document.querySelector("img").hasAttribute("src") // True
+
+// Ger attripuut
+document.querySelector("img").getAttribute("src") // url
+
+// Lisa attripuut
+document.querySelector("img").setAttribute("alt", "Pildi allkiri")
+document.querySelector("img").setAttribute("title", "Pildi pealkiri") // tegelt pildil ei ole title!

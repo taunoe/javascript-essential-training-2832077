@@ -51,3 +51,13 @@ const content = `
 `;
 
 main.innerHTML = content;
+
+// Lisa uus klass
+document.querySelector("main li:first-child").classList.add("uus-klass")
+// eemalda klass
+document.querySelector("main li:first-child").classList.remove("packprop")
+// toggle
+document.querySelector("main li:first-child").classList.toggle("backpack__volume")
+// asenda
+//document.querySelector("main li:first-child").classList.replace("vana-klass", "uus-klass")
+
