@@ -58,3 +58,14 @@ console.log(color);
 // Muuda
 document.querySelector(".site-title").style.color = "red";
 
+
+const button = document.querySelector("#myButton");
+
+// Get the value of the 'class' attribute
+console.log(button.getAttribute("class")); // "btn btn-primary"
+
+// Overwrite the value of the 'class' attribute
+button.setAttribute("class", "btn btn-secondary");
+
+// Remove the 'type' attribute
+button.removeAttribute("type");

@@ -19,7 +19,6 @@ const everydayPack = new Backpack(
 );
 
 const content = `
-  <article class="backpack" id="everyday">
     <figure class="backpack__image">
       <img src=${everydayPack.image} alt="" />
     </figure>
@@ -45,9 +44,18 @@ const content = `
         everydayPack.lidOpen
       }</span></li>
     </ul>
-  </article>
 `;
 
 const main = document.querySelector(".maincontent");
 
-main.innerHTML = content;
+const uus_artikel = document.createElement("article"); // uus element
+uus_artikel.classList.add("backpack"); // lisa klass
+uus_artikel.setAttribute("id", "everyday"); // lisa id
+uus_artikel.innerHTML = content; // lisa sisu
+
+main.append(uus_artikel); // lisa main lõppu, nii et vana sisu jääb alles
+//main.prepend(uus_artikel);  // lisa main algusse, nii et vana sisu jääb alles
+main.appendChild();
+main.replaceChild();
+main.insertBefore();
+main.insertAdjacentElement();

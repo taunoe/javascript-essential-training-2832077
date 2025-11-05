@@ -23,7 +23,37 @@
       <div class="site-description">All backpack packing, all the time.</div>
     </header>
     <main class="maincontent"></main>
+    <div>
+      <form id="productForm" onsubmit="submitProducts(event)">
+        <fieldset>
+          <legend>Select products:</legend>
+
+          <label for="product1">
+          <input type="checkbox" id="product1" class="product" data-sku="SKU1234" />
+          Product 1
+          </label>
+
+          <label for="product2">
+          <input type="checkbox" id="product2" class="product" data-sku="SKU5678" />
+          Product 2
+          </label>
+
+          <label for="product3">
+          <input
+            type="checkbox"
+            id="product3"
+            class="product"
+            data-sku="SKU91011"
+          />
+          Product 3
+          </label>
+
+          <button type="submit">Submit Selection</button>
+        </fieldset>
+      </form>
+    </div>
     <footer class="sitefooter">
+      <button id="myButton" class="btn btn-primary" type="button">Click Me!</button>
       <p>
         Demo project for JavaScript Essential Training, a LinkedIn Learning
         course.
