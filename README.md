@@ -67,6 +67,14 @@ function add(a, b) {
 
 **TypeScript** , a _strongly typed_ variant of JavaScript that adds static typing to solve this problem. TypeScript is then compiled into JavaScript before being run in the browser.
 
+- If you need to access items by index, you should probably be using an **array**
+
+- If you need to access items by key, you should probably be using an **Object**
+
+- If you need to access items by value, you should probably be using a **Map**
+
+- **Set** is specifically for when you need to store a collection of unique items and then perform operations on that collection.
+
 QuerySelector [05_02](05_02/)
 
 ### Instructor
