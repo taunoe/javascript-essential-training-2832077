@@ -10,7 +10,7 @@ The full course is available from [LinkedIn Learning][lil-course-url].
    - [Prettier code formatter extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
    - [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
    - Live Server
-2. From the root folder, open the terminal (bash) and enter the command 
+2. From the root folder, open the terminal (bash) and enter the command
 
 ```bash
 npm install
@@ -30,6 +30,42 @@ to install dependencies.
 npm audit
 npm audit fix
 ```
+
+JavaScript is a **weakly typed language**, meaning variables can hold values of any type without declaring what type of data they hold.
+
+```js
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add(5, 10)); // Output: 15
+console.log(add("5", 10)); // Output: "510"
+
+//////
+
+function add(a, b) {
+  if (typeof a !== "number" || typeof b !== "number") {
+    throw new TypeError("Both arguments must be numbers");
+  }
+  return a + b;
+}
+
+///////
+
+function assertType(value, type) {
+  if (typeof value !== type) {
+    throw new TypeError(`Expected ${type}, but got ${typeof value}`);
+  }
+}
+
+function add(a, b) {
+  assertType(a, "number");
+  assertType(b, "number");
+  return a + b;
+}
+```
+
+**TypeScript** , a _strongly typed_ variant of JavaScript that adds static typing to solve this problem. TypeScript is then compiled into JavaScript before being run in the browser.
 
 QuerySelector [05_02](05_02/)
 
