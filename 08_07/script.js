@@ -3,17 +3,24 @@
  * @link https://developer.mozilla.org/en-US/docs/Glossary/Function
  */
 
-const tipCalculator = () => {
-  let sum = 29.95;
-  let percentage = 18;
+const formatter = (locale, currency, value) => {
+  let formatted_value = new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: currency
+  }).format(value);
+
+  return formatted_value
+};
+
+const tip_calculator = (sum, percentage, locale, currency) => {
   let tip = sum * (percentage / 100);
   let total = sum + tip;
   console.log(`
-  Sum before tip: ${sum}
-  Tip percentage: ${percentage}%
-  Tip:            ${tip.toFixed(2)}
-  Total:          ${total.toFixed(2)}
+  Sum before tip: ${formatter(locale, currency, sum)}
+  Tip percentage: ${percentage} %
+  Tip:            ${formatter(locale, currency, tip.toFixed(2))}
+  Total:          ${formatter(locale, currency, total.toFixed(2))}
 `);
 };
 
-tipCalculator();
+tip_calculator(100, 22, "et-EE", "EUR");
