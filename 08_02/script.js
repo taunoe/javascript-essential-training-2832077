@@ -4,12 +4,16 @@
  */
 
 // Function declaration:
+// global
+// can be redeclare, owerwrite
 function doSomeMath(a, b) {
   let c = a + b;
   return c;
 }
 
 // Function expression:
+// local scope
+// can not be redeclared, owerwrite
 const doMoreMath = function (a = 3, b = 2) {
   let c = a * b;
   return c;

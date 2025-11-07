@@ -10,6 +10,7 @@ const greenPack = {
   pocketNum: 3,
 };
 
+// The arrow function
 const addPack = (currentPack) => {
   const newArticle = document.createElement("article");
   newArticle.innerHTML = `
