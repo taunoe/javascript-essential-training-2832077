@@ -16,3 +16,16 @@ stuff.forEach((item) => {
 });
 
 article.append(stuffList)
+
+// maps
+const asjad = stuff.map((item) => {
+  let listItem = document.createElement("li");
+  listItem.innerHTML = item;
+  return listItem;
+});
+
+asjad.forEach((item) => {
+  stuffList.append(item);
+})
+
+console.log(asjad);

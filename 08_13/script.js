@@ -13,7 +13,7 @@ const everydayPack = new Backpack(
   26,
   26,
   false,
-  "December 5, 2018 15:00:00 PST",
+  "November 5, 2025 15:00:00 PST",
   "../assets/images/everyday.svg"
 );
 
@@ -77,4 +77,30 @@ const usedStatus = () => {
   `);
 };
 
+const used_status = () => {
+  let age = everydayPack.backpackAge();
+  let description;
+
+  switch (true) {
+    case age < 30:
+      description = "uus"
+      break;
+    case age >= 30 && age < 365:
+      description = "natuke kasutatud"
+      break;
+    case age >= 365 && age < 1095:
+      description = "kasutatud"
+      break;
+    case age >= 1095:
+      description = "vana"
+      break;
+  }
+
+  console.log(`
+  Age: ${age} days
+  Status: ${description}
+  `);
+};
+
 usedStatus()
+used_status()

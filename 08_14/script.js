@@ -3,9 +3,9 @@
  * @link https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
  */
 
-const stuff = ["piggy", "headlamp", "pen", "pencil", "eraser", "water bottle"];
+const asjad = ["piggy", "headlamp", "pen", "pencil", "eraser", "water bottle"];
 
-const nestedObjects = {
+const nested_objects = {
   item01: {
     name: "piggy",
     type: "toy",
@@ -39,48 +39,54 @@ const nestedObjects = {
 };
 
 const article = document.querySelector("article");
-let stuffList = document.createElement("ul");
+let asjad_list = document.createElement("ul");
 
 
 /**
  * for loop
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
  */
-for (let i = 0; i < stuff.length; i++) {
+/*
+for (let i = 0; i < asjad.length; i++) {
   let listItem = document.createElement("li");
-  listItem.innerHTML = stuff[i];
-  stuffList.append(listItem);
+  listItem.innerHTML = asjad[i];
+  asjad_list.append(listItem);
 }
+*/
 
 /**
  * for...of loop and arrays
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
  */
-// for (const item of stuff) {
-//   let listItem = document.createElement("li");
-//   listItem.innerHTML = item;
-//   stuffList.append(listItem);
-// }
+// modern
+for (const item of asjad) {
+  let listItem = document.createElement("li");
+  listItem.innerHTML = item;
+  asjad_list.append(listItem);
+}
 
 /**
  * foreach array method
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  */
-// stuff.forEach((item) => {
-//   let listItem = document.createElement("li");
-//   listItem.innerHTML = item;
-//   stuffList.append(listItem);
-// });
+// modern
+// for arrays
+asjad.forEach((item) => {
+  let listItem = document.createElement("li");
+  listItem.innerHTML = item;
+  asjad_list.append(listItem);
+});
 
 /**
  * for...in loop and objects
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
  */
-// for (const singleObject in nestedObjects) {
-//   let listItem = document.createElement("li");
-//   listItem.innerHTML = `Name: ${nestedObjects[singleObject].name}`;
-//   stuffList.append(listItem);
-// }
+// for objects
+for (const single_object in nested_objects) {
+  let listItem = document.createElement("li");
+  listItem.innerHTML = `Name: ${nested_objects[single_object].name}`;
+  asjad_list.append(listItem);
+}
 
 
-article.append(stuffList);
+article.append(asjad_list);
