@@ -39,6 +39,18 @@ const backpackList = backpackObjectArray.map((backpack) => {
     <button class="lid-toggle">Open lid</button>
   `;
 
+  //
+  const button = backpackArticle.querySelector(".lid-toggle");
+  const status = backpackArticle.querySelector(".backpack__lid span");
+
+  button.addEventListener("click",
+  (event) => {
+    console.log(`Nupu vajutus: ${backpack.name}`);
+    console.log(event);
+    status.innerText === "avatud" ? status.innerText = "suletud" : status.innerText = "avatud"
+  }
+);
+
   return backpackArticle;
 });
 
@@ -47,3 +59,7 @@ const main = document.querySelector(".maincontent");
 backpackList.forEach((backpack) => {
   main.append(backpack);
 });
+
+
+
+

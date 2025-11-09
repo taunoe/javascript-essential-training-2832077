@@ -4,9 +4,9 @@ import Backpack from "./Backpack.js";
 // Create new Backpack object
 const everydayPack = new Backpack(
   "pack01",
-  "Everyday Backpack",
+  "Igav seljakott",
   30,
-  "grey",
+  "hall",
   15,
   26,
   26,
@@ -18,14 +18,14 @@ const everydayPack = new Backpack(
 // Create new Backpack object
 const frogPack = new Backpack(
   "pack02",
-  "Frog Backpack",
-  8,
-  "green",
+  "Konna seljakott",
+  20,
+  "roheline",
   3,
   10,
   10,
   false,
-  "October 16, 2019 15:00:00 PST",
+  "November 1, 2025 15:00:00 PST",
   "../assets/images/frog.svg"
 );
 

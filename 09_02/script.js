@@ -38,3 +38,7 @@ container.addEventListener(
   },
   false
 );
+
+container.addEventListener("click", () => {
+  console.log("container was clicked!");
+}, false);
