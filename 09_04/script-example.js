@@ -6,6 +6,7 @@
  * - Add an event listener to a specific key on the keyboard to change the background color of the whole page - from dark to light and back again.
  */
 
+
 const gridContainer = document.querySelector(".grid");
 
 gridContainer.addEventListener("mouseenter", () => {
