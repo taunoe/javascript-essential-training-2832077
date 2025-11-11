@@ -169,3 +169,7 @@ const cell28 = document.querySelector(".cell28");
 cell28.addEventListener("touchstart", () => {
     cell28.classList.toggle("eriline");
 });
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Element#transition_events
+
+
