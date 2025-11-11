@@ -27,10 +27,12 @@ class Backpack {
   }
   toggleLid(lidStatus) {
     this.lidOpen = lidStatus;
+    return this; // Return the current object to enable chaining
   }
   newStrapLength(lengthLeft, lengthRight) {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
+    return this; // Return the current object to enable chaining
   }
   backpackAge() {
     let now = new Date();

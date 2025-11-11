@@ -29,8 +29,21 @@ const frogPack = new Backpack(
   "../assets/images/frog.svg"
 );
 
+const seljakott = new Backpack(
+  "pack02",    // id
+  "Seljakott", // name
+  40,          // volume
+  "must",      // color
+  3, // pocketNum
+  35, // strapLengthL
+  35, // strapLengthR
+  true, // lidOpen
+  "November 09, 2025 15:00:00 PST", // dateAcquired
+  "../assets/images/frog.svg"  // image
+);
+
 // Add Backpack objects into an array
-const backpackObjectArray = [everydayPack, frogPack];
+const backpackObjectArray = [everydayPack, frogPack, seljakott];
 
 // Export the array to be used in other files
 export default backpackObjectArray;

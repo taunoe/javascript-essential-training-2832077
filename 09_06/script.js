@@ -72,6 +72,7 @@ const backpackList = backpackObjectArray.map((backpack) => {
 
   // Add event listener
   button.addEventListener("click", (event) => {
+    console.log(event);
     lidToggle(event, button, newArg)
   })
 
@@ -86,3 +87,14 @@ backpackList.forEach((backpack) => {
 });
 
 
+// chain multiple methods togethe
+let greeting = "Hello";
+greeting = greeting.concat(" World").toUpperCase().trim();
+console.log(greeting); // Outputs: "HELLO WORLD"
+
+// Usage
+// in data.js
+//const myBackpack = new Backpack("Hiker", 30, "blue", 5, 35, 35, false);
+backpackObjectArray[2].toggleLid(false).newStrapLength(25, 25);
+console.log(backpackObjectArray[2]);
+// htmli on vaja eraldi muuta
