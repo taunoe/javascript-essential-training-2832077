@@ -136,3 +136,55 @@ const main = document.querySelector(".maincontent");
 backpackList.forEach((backpack) => {
   main.append(backpack);
 });
+
+/////
+
+// event listener
+const nupp = document.querySelector("#aButton"); // esimene button
+
+nupp.addEventListener("click", (event) => {
+  if (event.detail) {
+    console.log(event.detail); // 1
+    console.log(event.detail.message); // undefined
+  } else {
+    console.log("Button clicked!");
+  }
+});
+
+// Creating and dispatching events
+// Create a new click event
+const clickEvent = new Event("click");
+
+// Dispatch the event on the button
+// https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent
+nupp.dispatchEvent(clickEvent);
+
+// Creating custom click events
+// https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent
+const customClickEvent = new CustomEvent("click", {
+  detail: { message: "This is a custom click!" },
+});
+
+// Dispatch the custom event on the button
+nupp.dispatchEvent(customClickEvent);
+
+// Simulating user input
+const input = document.querySelector("#inputField");
+const text = "Tere maailm!";
+let index = 0;
+
+function typeCharacter() {
+  if (index < text.length) {
+    const keyEvent = new KeyboardEvent("keydown", {
+      key: text[index],
+      code: `Key${text[index].toUpperCase()}`,
+      charCode: text[index].charCodeAt(0),
+    });
+    input.value += text[index];
+    input.dispatchEvent(keyEvent);
+    index++;
+    setTimeout(typeCharacter, 100);
+  }
+}
+
+typeCharacter();
